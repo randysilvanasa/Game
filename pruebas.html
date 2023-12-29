@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto integrador - Sitio Web responsivo con Flex y Grid</title>
+  <style>
+    /* Common Styles */
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* Header Styles */
+    .encabezado {
+      text-align: center;
+    }
+
+    .imagen img {
+      max-width: 100%; /* Make images responsive */
+      height: auto;
+    }
+
+    /* Main Content Styles */
+    .sitio {
+      max-width: 100%;
+      overflow-x: hidden; /* Prevent horizontal scrolling on smaller screens */
+    }
+
+    .principal {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column by default */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Central Area Styles */
+    .area-central {
+      background: #FFF6E5;
+      padding-bottom: 2em;
+    }
+
+    .area-central-contenido {
+      padding: 1.5em;
+    }
+
+    .area-central-texto {
+      text-align: center;
+    }
+
+    /* Intermediate Section Styles */
+    .intermedia ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    .intermedia li {
+      flex-basis: calc(50% - 20px); /* Two items per row with a gap of 20px */
+      margin-bottom: 20px;
+    }
+
+    .area-intermedia {
+      padding: 1.5em;
+    }
+
+    /* Lower Section Styles */
+    .inferior {
+      background: #FFF6E5;
+      padding: 2em;
+    }
+
+    .contenido-inferior {
+      padding: 1.5em;
+    }
+
+    /* Sidebar Styles */
+    .lateral {
+      background: hsl(0, 0%, 90%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .barra-lateral {
+      padding: 2em;
+      background: #B5AA9D;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .barra-lateral:last-of-type {
+      background: #B9B7A7;
+    }
+
+    /* Footer Styles */
+    .pie-de-pagina {
+      padding: 2em;
+      background: #7C90A0;
+      color: white;
+      text-align: center;
+    }
+
+    .pie-de-pagina a {
+      color: white;
+    }
+
+    .pie-de-pagina a:hover, .pie-de-pagina a:focus {
+      border-bottom: 1px solid white;
+    }
+
+    /* Responsive Breakpoints */
+    @media screen and (min-width: 600px) {
+      .principal {
+        grid-template-columns: 1fr 1fr; /* Two columns for medium-sized screens */
+      }
+    }
+
+    @media screen and (min-width: 800px) {
+      .principal {
+        grid-template-columns: 2fr 1fr; /* Adjust the column ratios as needed */
+      }
+
+      .encabezado {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    @media screen and (min-width: 1040px) {
+      /* Add additional styles for larger screens if needed */
+    }
+  </style>
+</head>
+<body class="sitio">
+  <header class="encabezado">
+    <div class="logo">
+      <figure class="imagen">
+        <img src="https://assets.codepen.io/3434869/hotel-logo.png" alt="Hotel Logo">
+      </figure>
+    </div>
+  </header>
+
+  <figure class="imagen">
+    <img src='https://images.unsplash.com/photo-1593224647849-0ef96ecc2bdd?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
+  </figure>
+
+  <main id="content" class="principal">
+    <!-- Your main content goes here -->
+  </main>
+
+  <aside class="lateral">
+    <div class="barra-lateral">
+      <h2>Alojamiento</h2>
+      <p>Nuestro hotel cuenta con 78 habitaciones y suites diseñadas para ofrecer el máximo confort y bienestar a sus huéspedes.</p>
+    </div>
+    <div class="barra-lateral">
+      <h2>Eventos Corporativos</h2>
+      <p>8 salones destinados a reuniones corporativas, seminarios y capacitaciones así como también con 4,0000 mts2 de hermosos jardines con árboles patrimoniales.</p>
+    </div>
+  </aside>
+
+  <footer class="pie-de-pagina">
+    <p>Para mayor información, visite <a href="#" target="_blank" rel="nofollow">nuestro sitio</a>.</p>
+  </footer>
+</body>
+</html>

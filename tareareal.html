@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2 - Profundizando en las propiedades del módulo Grid</title>
+    <style>
+        @media screen and (min-width: 800px) {
+            .contenedor {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "header header header"
+                "nav main aside"
+                "footer footer footer";
+            min-height: 100vh; 
+            }
+            
+            @media screen and (max-width: 800px) {
+            .contenedor {
+               display: grid;
+               grid-template-rows: 200px 200px 200px 200px;
+               grid-template-columns: 3fr 1fr 3fr;
+               grid-template-areas:
+                        'header header'
+                        'nav main'
+                        'nav aside'
+                        'footer footer';
+            }
+
+        
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-areas: "header header header"
+                                 "nav main aside"
+                                 "footer footer footer";
+            min-height: 100vh; 
+        }
+
+        header {
+            grid-area: header;
+            background: #989C94;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            grid-area: nav;
+            background: #E3E7D0;
+            color: #25291C;
+            padding: 20px;
+        }
+
+        main {
+            grid-area: main;
+            background: #E6E49F;
+            color: #25291C;
+            padding: 20px;
+        }
+
+        aside {
+            grid-area: aside;
+            background: #BDC2BF;
+            color: #25291C;
+            padding: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #25291C;
+            color: white;
+            padding: 20px;
+        }
+
+        }
+
+
+        @media screen and (max-width: 800px) {
+            .contenedor {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: minmax(100px, auto);
+                grid-template-areas: 
+                "header header header header"
+                "main main aside aside"
+                "main main nav nav"
+                "footer footer footer footer"
+                ;
+
+            }  
+        
+        header{
+            grid-area: header;
+        } 
+        main{
+            grid-area: main;
+        }
+        nav{
+            grid-area: nav;
+        }
+        aside {
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+/*  */
+.contenedor > * {
+  padding: 20px;
+}
+        @media screen and (min-width: 800px) {
+        .contenedor {
+            color: #989C94;
+            font-family: helvetica, arial, sans-serif;
+        }
+        }
+
+        @media screen and (max-width: 800px) {
+        .contenedor {
+            color: #989C94;
+            font-family: helvetica, arial, sans-serif;
+        }
+
+        }
+
+        header {
+            color: white;
+            background: #989C94;
+        } 
+        main {
+            background: #E6E49F;
+            color: #25291C;
+        }
+        nav {
+            color: #25291C;
+            background: #E3E7D0;
+        }
+        aside {
+            background: #BDC2BF;
+            color: #25291C;
+        }
+        footer {
+            color: white;
+            background: #25291C;
+        }
+/*  */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+h1, h2 {
+  text-transform: uppercase;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+          <h1>Encabezado</h1>
+        </header>
+        <main>
+          <h2>contenido central</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </main>
+        <nav>
+          <h2>navegación</h2>
+          <ul>
+            <li>Menú 1</li>
+            <li>Menú 2</li>
+            <li>Menú 3</li>
+            <li>Menú 4</li>
+          </ul>
+        </nav>
+        <aside>
+          <h2>Barra lateral</h2>
+          <p>Contenido</p>
+        </aside>
+        <footer>
+          <h2>Pie de página</h2>
+        </footer>
+      </div>
+</body>
+</html>
